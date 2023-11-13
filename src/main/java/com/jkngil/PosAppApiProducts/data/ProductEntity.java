@@ -15,7 +15,7 @@ import jakarta.persistence.OneToOne;
 public class ProductEntity implements Serializable {
 
 	private static final long serialVersionUID = -2676592488870068441L;
-	
+
 	@Id
 	@GeneratedValue
 	private long id;
@@ -31,18 +31,116 @@ public class ProductEntity implements Serializable {
 	private double markup;
 	@Column
 	private double retailPrice;
-	@OneToOne
-	private BrandEntity brand;
 	@OneToMany
-	private List<SupplierEntity> supplier;
-	@OneToOne
-	private ProductTypeEntity productType;
+	private List<SupplierEntity> suppliers;
+	@OneToMany
+	private List<ProductAttributeEntity> productAttributes;
+	@OneToMany
+	private List<ProductVariantEntity> productVariants;
+
+//	@OneToOne
+//	private BrandEntity brand;
+//	@OneToOne
+//	private ProductTypeEntity productType;
 	@ManyToMany
-	private List<ProductTagEntity> productTag;
+	private List<ProductTagEntity> productTags;
 	@ManyToMany
-	private List<ProductCategoryEntity> productCategory;
-	@OneToMany
-	private List<ProductAttributeEntity> productAttribute;
-	@OneToMany
-	private List<ProductVariantEntity> productVariant;
+	private List<ProductCategoryEntity> productCategories;
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public int getAmount() {
+		return amount;
+	}
+
+	public void setAmount(int amount) {
+		this.amount = amount;
+	}
+
+	public double getCost() {
+		return cost;
+	}
+
+	public void setCost(double cost) {
+		this.cost = cost;
+	}
+
+	public double getMarkup() {
+		return markup;
+	}
+
+	public void setMarkup(double markup) {
+		this.markup = markup;
+	}
+
+	public double getRetailPrice() {
+		return retailPrice;
+	}
+
+	public void setRetailPrice(double retailPrice) {
+		this.retailPrice = retailPrice;
+	}
+
+	public List<SupplierEntity> getSuppliers() {
+		return suppliers;
+	}
+
+	public void setSuppliers(List<SupplierEntity> suppliers) {
+		this.suppliers = suppliers;
+	}
+
+	public List<ProductAttributeEntity> getProductAttributes() {
+		return productAttributes;
+	}
+
+	public void setProductAttributes(List<ProductAttributeEntity> productAttributes) {
+		this.productAttributes = productAttributes;
+	}
+
+	public List<ProductVariantEntity> getProductVariants() {
+		return productVariants;
+	}
+
+	public void setProductVariants(List<ProductVariantEntity> productVariants) {
+		this.productVariants = productVariants;
+	}
+
+	public List<ProductTagEntity> getProductTags() {
+		return productTags;
+	}
+
+	public void setProductTags(List<ProductTagEntity> productTags) {
+		this.productTags = productTags;
+	}
+
+	public List<ProductCategoryEntity> getProductCategories() {
+		return productCategories;
+	}
+
+	public void setProductCategories(List<ProductCategoryEntity> productCategories) {
+		this.productCategories = productCategories;
+	}
+
 }
