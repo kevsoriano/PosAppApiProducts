@@ -3,13 +3,17 @@ package com.jkngil.PosAppApiProducts.data;
 import java.io.Serializable;
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
-import jakarta.persistence.OneToOne;
 
 @Entity(name = "products")
 public class ProductEntity implements Serializable {
@@ -31,21 +35,25 @@ public class ProductEntity implements Serializable {
 	private double markup;
 	@Column
 	private double retailPrice;
-	@OneToMany
+	@ManyToMany(cascade = { CascadeType.PERSIST }, fetch = FetchType.EAGER)
+	@JoinTable(name = "product_suppliers", joinColumns = @JoinColumn(name = "product_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "supplier_id", referencedColumnName = "id"))
 	private List<SupplierEntity> suppliers;
-	@OneToMany
-	private List<ProductAttributeEntity> productAttributes;
-	@OneToMany
-	private List<ProductVariantEntity> productVariants;
-
-//	@OneToOne
-//	private BrandEntity brand;
-//	@OneToOne
-//	private ProductTypeEntity productType;
-	@ManyToMany
+	@ManyToMany(cascade = { CascadeType.PERSIST }, fetch = FetchType.EAGER)
+	@JoinTable(name = "product_producttags", joinColumns = @JoinColumn(name = "product_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "product_tag_id", referencedColumnName = "id"))
 	private List<ProductTagEntity> productTags;
-	@ManyToMany
+	@ManyToMany(cascade = { CascadeType.PERSIST }, fetch = FetchType.EAGER)
+	@JoinTable(name = "product_productcategories", joinColumns = @JoinColumn(name = "product_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "product_category_id", referencedColumnName = "id"))
 	private List<ProductCategoryEntity> productCategories;
+//	@ManyToOne
+//	@JoinColumn(name = "brand_id", nullable = false)
+//	private BrandEntity brand;
+
+//	@OneToMany
+//	private List<ProductAttributeEntity> productAttributes;
+//	@OneToMany
+//	private List<ProductVariantEntity> productVariants;
+//	@OneToOne(cascade = { CascadeType.PERSIST }, fetch = FetchType.EAGER)
+//	private ProductTypeEntity productType;
 
 	public long getId() {
 		return id;
@@ -111,22 +119,6 @@ public class ProductEntity implements Serializable {
 		this.suppliers = suppliers;
 	}
 
-	public List<ProductAttributeEntity> getProductAttributes() {
-		return productAttributes;
-	}
-
-	public void setProductAttributes(List<ProductAttributeEntity> productAttributes) {
-		this.productAttributes = productAttributes;
-	}
-
-	public List<ProductVariantEntity> getProductVariants() {
-		return productVariants;
-	}
-
-	public void setProductVariants(List<ProductVariantEntity> productVariants) {
-		this.productVariants = productVariants;
-	}
-
 	public List<ProductTagEntity> getProductTags() {
 		return productTags;
 	}
@@ -142,5 +134,13 @@ public class ProductEntity implements Serializable {
 	public void setProductCategories(List<ProductCategoryEntity> productCategories) {
 		this.productCategories = productCategories;
 	}
+
+//	public BrandEntity getBrand() {
+//		return brand;
+//	}
+//
+//	public void setBrand(BrandEntity brand) {
+//		this.brand = brand;
+//	}
 
 }

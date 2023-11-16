@@ -1,6 +1,7 @@
 package com.jkngil.PosAppApiProducts.shared;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class ProductDto implements Serializable {
 	private static final long serialVersionUID = 4075764856666367148L;
@@ -11,6 +12,10 @@ public class ProductDto implements Serializable {
 	private double cost;
 	private double markup;
 	private double retailPrice;
+	private List<SupplierDto> suppliers;
+	private List<ProductTagDto> productTags;
+	private List<ProductCategoryDto> productCategories;
+//	private BrandDto brand;
 
 	public long getId() {
 		return id;
@@ -66,6 +71,38 @@ public class ProductDto implements Serializable {
 
 	public void setRetailPrice(double retailPrice) {
 		this.retailPrice = retailPrice;
+	}
+
+	public List<ProductTagDto> getProductTags() {
+		return productTags;
+	}
+
+	public void setProductTags(List<ProductTagDto> productTags) {
+		this.productTags = productTags;
+	}
+
+	public List<ProductCategoryDto> getProductCategories() {
+		return productCategories;
+	}
+
+	public void setProductCategories(List<ProductCategoryDto> productCategories) {
+		this.productCategories = productCategories;
+	}
+
+//	public BrandDto getBrand() {
+//		return brand;
+//	}
+//
+//	public void setBrand(BrandDto brand) {
+//		this.brand = brand;
+//	}
+
+	public List<SupplierDto> getSuppliers() {
+		return suppliers;
+	}
+
+	public void setSuppliers(List<SupplierDto> suppliers) {
+		this.suppliers = suppliers;
 	}
 
 }
