@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 import com.jkngil.PosAppApiProducts.data.ProductEntity;
 import com.jkngil.PosAppApiProducts.data.ProductRepository;
 import com.jkngil.PosAppApiProducts.shared.ProductDto;
+import com.jkngil.PosAppApiProducts.shared.ProductVariantDto;
 
 @Service
 public class ProductServiceImpl implements ProductService {
@@ -29,6 +30,12 @@ public class ProductServiceImpl implements ProductService {
 	public ProductDto createProduct(ProductDto productDetails) {
 		ModelMapper modelMapper = new ModelMapper();
 		modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
+		
+		for(int i=0; i<productDetails.getProductVariants().size();i++) {
+			ProductVariantDto productVariant = productDetails.getProductVariants().get(i);
+			productVariant.setProductDetails(productDetails);
+			productDetails.getProductVariants().set(i,productVariant);
+		}
 		
 		ProductEntity productEntity = modelMapper.map(productDetails, ProductEntity.class);
 		ProductEntity createdProduct = productRepository.save(productEntity);

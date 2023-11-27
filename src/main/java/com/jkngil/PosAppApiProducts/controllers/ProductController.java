@@ -30,7 +30,7 @@ public class ProductController {
 	ProductService productService;
 
 	@PostMapping
-	public ResponseEntity<ProductResponseModel> createUser(@Valid @RequestBody CreateProductRequestModel productDetails) {
+	public ResponseEntity<ProductResponseModel> createProduct(@Valid @RequestBody CreateProductRequestModel productDetails) {
 		ModelMapper modelMapper = new ModelMapper();
 		modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
 		
