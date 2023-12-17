@@ -9,6 +9,7 @@ public class ProductVariantDto implements Serializable {
 	private long id;
 	private String SKU;
 	private List<ProductAttributeDto> productAttributes;
+	private List<OutletProductVariantDto> inventoryDetails;
 	private ProductDto productDetails;
 
 	public long getId() {
@@ -41,6 +42,14 @@ public class ProductVariantDto implements Serializable {
 
 	public void setProductDetails(ProductDto productDetails) {
 		this.productDetails = productDetails;
+	}
+
+	public List<OutletProductVariantDto> getInventoryDetails() {
+		return inventoryDetails;
+	}
+
+	public void setInventoryDetails(List<OutletProductVariantDto> inventoryDetails) {
+		this.inventoryDetails = inventoryDetails;
 	}
 
 }

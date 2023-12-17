@@ -1,328 +1,672 @@
-2023-11-27T19:13:02.023+08:00  INFO 5240 --- [restartedMain] c.j.P.PosAppApiProductsApplication       : Starting PosAppApiProductsApplication using Java 17.0.8 with PID 5240 (/Users/kevingilsoriano/git/PosAppApiProducts/target/classes started by kevingilsoriano in /Users/kevingilsoriano/git/PosAppApiProducts)
-2023-11-27T19:13:02.025+08:00  INFO 5240 --- [restartedMain] c.j.P.PosAppApiProductsApplication       : No active profile set, falling back to 1 default profile: "default"
-2023-11-27T19:13:02.042+08:00  INFO 5240 --- [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8012
-2023-11-27T19:13:02.042+08:00  INFO 5240 --- [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=products-ws, profiles=[default], label=null, version=01a2d36c2dc28d77f28554e981d3ddc0fcc39f19, state=null
-2023-11-27T19:13:02.042+08:00  INFO 5240 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-11-27T19:13:02.043+08:00  INFO 5240 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-11-27T19:13:02.293+08:00  INFO 5240 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-11-27T19:13:02.353+08:00  INFO 5240 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 1 JPA repository interfaces.
-2023-11-27T19:13:02.433+08:00  INFO 5240 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=fc3baddf-d51c-330b-b451-16a94ec13db0
-2023-11-27T19:13:02.657+08:00  INFO 5240 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
-2023-11-27T19:13:02.661+08:00  INFO 5240 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-27T19:13:02.662+08:00  INFO 5240 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
-2023-11-27T19:13:02.691+08:00  INFO 5240 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-27T19:13:02.691+08:00  INFO 5240 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 648 ms
-2023-11-27T19:13:02.705+08:00  INFO 5240 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-11-27T19:13:02.790+08:00  INFO 5240 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1f5ce944
-2023-11-27T19:13:02.791+08:00  INFO 5240 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-11-27T19:13:02.795+08:00  INFO 5240 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/pos_app'
-2023-11-27T19:13:02.840+08:00  INFO 5240 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-11-27T19:13:02.864+08:00  INFO 5240 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-11-27T19:13:02.997+08:00  INFO 5240 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2023-11-27T19:13:03.376+08:00  INFO 5240 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-11-27T19:13:03.380+08:00  INFO 5240 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-11-27T19:13:03.494+08:00  WARN 5240 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-11-27T19:13:03.638+08:00  WARN 5240 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2023-11-27T19:13:03.652+08:00  INFO 5240 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2023-11-27T19:13:03.673+08:00  WARN 5240 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-11-27T19:13:03.698+08:00  INFO 5240 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 53211 (http) with context path ''
-2023-11-27T19:13:03.699+08:00  INFO 5240 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 53211
-2023-11-27T19:13:03.701+08:00  INFO 5240 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2023-11-27T19:13:03.715+08:00  INFO 5240 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2023-11-27T19:13:03.717+08:00  INFO 5240 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-11-27T19:13:03.727+08:00  INFO 5240 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2023-11-27T19:13:03.727+08:00  INFO 5240 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2023-11-27T19:13:03.727+08:00  INFO 5240 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2023-11-27T19:13:03.727+08:00  INFO 5240 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2023-11-27T19:13:03.727+08:00  INFO 5240 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2023-11-27T19:13:03.727+08:00  INFO 5240 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2023-11-27T19:13:03.727+08:00  INFO 5240 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2023-11-27T19:13:03.905+08:00  INFO 5240 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2023-11-27T19:13:03.906+08:00  INFO 5240 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2023-11-27T19:13:03.907+08:00  INFO 5240 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2023-11-27T19:13:03.909+08:00  INFO 5240 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1701083583908 with initial instances count: 2
-2023-11-27T19:13:03.910+08:00  INFO 5240 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PRODUCTS-WS with eureka with status UP
-2023-11-27T19:13:03.910+08:00  INFO 5240 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1701083583910, current=UP, previous=STARTING]
-2023-11-27T19:13:03.910+08:00  INFO 5240 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/localhost:products-ws:0: registering service...
-2023-11-27T19:13:03.917+08:00  INFO 5240 --- [restartedMain] c.j.P.PosAppApiProductsApplication       : Started PosAppApiProductsApplication in 12.29 seconds (process running for 12.735)
-2023-11-27T19:13:04.010+08:00  INFO 5240 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/localhost:products-ws:0 - registration status: 204
-2023-11-27T19:18:03.737+08:00  INFO 5240 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-11-27T19:23:03.744+08:00  INFO 5240 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-11-27T19:23:41.576+08:00  INFO 5240 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-11-27T19:23:41.577+08:00  INFO 5240 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-11-27T19:23:41.578+08:00  INFO 5240 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-11-27T19:28:03.753+08:00  INFO 5240 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-11-27T19:31:53.409+08:00  INFO 5240 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
-2023-11-27T19:31:53.413+08:00  INFO 5240 --- [Thread-1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PRODUCTS-WS with eureka with status DOWN
-2023-11-27T19:31:53.413+08:00  INFO 5240 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1701084713413, current=DOWN, previous=UP]
-2023-11-27T19:31:53.414+08:00  INFO 5240 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/localhost:products-ws:0: registering service...
-2023-11-27T19:31:53.421+08:00  INFO 5240 --- [Thread-1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-11-27T19:31:53.423+08:00  INFO 5240 --- [Thread-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-11-27T19:31:53.446+08:00  INFO 5240 --- [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-11-27T19:31:53.451+08:00  INFO 5240 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-11-27T19:31:53.452+08:00  INFO 5240 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-11-27T19:31:53.452+08:00  INFO 5240 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2023-11-27T19:31:53.519+08:00  INFO 5240 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/localhost:products-ws:0 - registration status: 204
-2023-11-27T19:31:53.520+08:00  INFO 5240 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2023-11-27T19:31:53.607+08:00  INFO 5240 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/localhost:products-ws:0 - deregister  status: 200
-2023-11-27T19:31:53.609+08:00  INFO 5240 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2023-11-27T19:31:56.222+08:00  INFO 5240 --- [restartedMain] c.j.P.PosAppApiProductsApplication       : Starting PosAppApiProductsApplication using Java 17.0.8 with PID 5240 (/Users/kevingilsoriano/git/PosAppApiProducts/target/classes started by kevingilsoriano in /Users/kevingilsoriano/git/PosAppApiProducts)
-2023-11-27T19:31:56.222+08:00  INFO 5240 --- [restartedMain] c.j.P.PosAppApiProductsApplication       : No active profile set, falling back to 1 default profile: "default"
-2023-11-27T19:31:56.223+08:00  INFO 5240 --- [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8012
-2023-11-27T19:31:56.223+08:00  INFO 5240 --- [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=products-ws, profiles=[default], label=null, version=01a2d36c2dc28d77f28554e981d3ddc0fcc39f19, state=null
-2023-11-27T19:31:56.312+08:00  INFO 5240 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-11-27T19:31:56.315+08:00  INFO 5240 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 1 JPA repository interfaces.
-2023-11-27T19:31:56.342+08:00  INFO 5240 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=fc3baddf-d51c-330b-b451-16a94ec13db0
-2023-11-27T19:31:56.391+08:00  INFO 5240 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
-2023-11-27T19:31:56.392+08:00  INFO 5240 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-27T19:31:56.392+08:00  INFO 5240 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
-2023-11-27T19:31:56.399+08:00  INFO 5240 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-27T19:31:56.399+08:00  INFO 5240 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 176 ms
-2023-11-27T19:31:56.404+08:00  INFO 5240 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2023-11-27T19:31:56.447+08:00  INFO 5240 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@7488bfa5
-2023-11-27T19:31:56.447+08:00  INFO 5240 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2023-11-27T19:31:56.447+08:00  INFO 5240 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/pos_app'
-2023-11-27T19:31:56.460+08:00  INFO 5240 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-11-27T19:31:56.474+08:00  INFO 5240 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2023-11-27T19:31:56.569+08:00  INFO 5240 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-11-27T19:31:56.570+08:00  INFO 5240 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-11-27T19:31:56.599+08:00  WARN 5240 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-11-27T19:31:56.657+08:00  WARN 5240 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2023-11-27T19:31:56.670+08:00  INFO 5240 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2023-11-27T19:31:56.684+08:00  WARN 5240 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-11-27T19:31:56.698+08:00  INFO 5240 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 55245 (http) with context path ''
-2023-11-27T19:31:56.698+08:00  INFO 5240 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 55245
-2023-11-27T19:31:56.699+08:00  INFO 5240 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2023-11-27T19:31:56.702+08:00  INFO 5240 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2023-11-27T19:31:56.702+08:00  INFO 5240 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-11-27T19:31:56.708+08:00  INFO 5240 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2023-11-27T19:31:56.708+08:00  INFO 5240 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2023-11-27T19:31:56.708+08:00  INFO 5240 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2023-11-27T19:31:56.708+08:00  INFO 5240 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2023-11-27T19:31:56.708+08:00  INFO 5240 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2023-11-27T19:31:56.708+08:00  INFO 5240 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2023-11-27T19:31:56.708+08:00  INFO 5240 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2023-11-27T19:31:56.816+08:00  INFO 5240 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2023-11-27T19:31:56.817+08:00  INFO 5240 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2023-11-27T19:31:56.817+08:00  INFO 5240 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2023-11-27T19:31:56.817+08:00  INFO 5240 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1701084716817 with initial instances count: 3
-2023-11-27T19:31:56.818+08:00  INFO 5240 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PRODUCTS-WS with eureka with status UP
-2023-11-27T19:31:56.818+08:00  INFO 5240 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1701084716818, current=UP, previous=STARTING]
-2023-11-27T19:31:56.818+08:00  INFO 5240 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/192.168.1.8:products-ws:0: registering service...
-2023-11-27T19:31:56.823+08:00  INFO 5240 --- [restartedMain] c.j.P.PosAppApiProductsApplication       : Started PosAppApiProductsApplication in 3.172 seconds (process running for 1145.633)
-2023-11-27T19:31:56.824+08:00  INFO 5240 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2023-11-27T19:31:56.909+08:00  INFO 5240 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/192.168.1.8:products-ws:0 - registration status: 204
-2023-11-27T19:36:56.714+08:00  INFO 5240 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-11-27T19:41:56.722+08:00  INFO 5240 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-11-27T19:59:05.630+08:00  WARN 5240 --- [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=15m38s942ms).
-2023-11-27T20:15:23.193+08:00  WARN 5240 --- [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=16m17s565ms).
-2023-11-27T20:28:25.094+08:00  INFO 5240 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-11-27T20:28:25.115+08:00  WARN 5240 --- [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=11m1s871ms).
-2023-11-27T20:33:25.099+08:00  INFO 5240 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-11-27T20:35:22.958+08:00  INFO 5240 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2023-11-27T20:35:22.961+08:00  INFO 5240 --- [Thread-7] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PRODUCTS-WS with eureka with status DOWN
-2023-11-27T20:35:22.961+08:00  INFO 5240 --- [Thread-7] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1701088522961, current=DOWN, previous=UP]
-2023-11-27T20:35:22.962+08:00  INFO 5240 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/192.168.1.8:products-ws:0: registering service...
-2023-11-27T20:35:22.968+08:00  INFO 5240 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-11-27T20:35:22.976+08:00  INFO 5240 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-11-27T20:35:22.977+08:00  INFO 5240 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2023-11-27T20:35:22.980+08:00  INFO 5240 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2023-11-27T20:35:22.981+08:00  INFO 5240 --- [Thread-7] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2023-11-27T20:35:23.072+08:00  INFO 5240 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/192.168.1.8:products-ws:0 - registration status: 204
-2023-11-27T20:35:23.073+08:00  INFO 5240 --- [Thread-7] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2023-11-27T20:35:23.151+08:00  INFO 5240 --- [Thread-7] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/192.168.1.8:products-ws:0 - deregister  status: 200
-2023-11-27T20:35:23.153+08:00  INFO 5240 --- [Thread-7] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2023-11-27T20:35:27.058+08:00  INFO 5240 --- [restartedMain] c.j.P.PosAppApiProductsApplication       : Starting PosAppApiProductsApplication using Java 17.0.8 with PID 5240 (/Users/kevingilsoriano/git/PosAppApiProducts/target/classes started by kevingilsoriano in /Users/kevingilsoriano/git/PosAppApiProducts)
-2023-11-27T20:35:27.059+08:00  INFO 5240 --- [restartedMain] c.j.P.PosAppApiProductsApplication       : No active profile set, falling back to 1 default profile: "default"
-2023-11-27T20:35:27.060+08:00  INFO 5240 --- [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8012
-2023-11-27T20:35:27.060+08:00  INFO 5240 --- [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=products-ws, profiles=[default], label=null, version=01a2d36c2dc28d77f28554e981d3ddc0fcc39f19, state=null
-2023-11-27T20:35:27.163+08:00  INFO 5240 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-11-27T20:35:27.167+08:00  INFO 5240 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 1 JPA repository interfaces.
-2023-11-27T20:35:27.192+08:00  INFO 5240 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=fc3baddf-d51c-330b-b451-16a94ec13db0
-2023-11-27T20:35:27.230+08:00  INFO 5240 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
-2023-11-27T20:35:27.230+08:00  INFO 5240 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-27T20:35:27.230+08:00  INFO 5240 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
-2023-11-27T20:35:27.237+08:00  INFO 5240 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-27T20:35:27.237+08:00  INFO 5240 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 177 ms
-2023-11-27T20:35:27.242+08:00  INFO 5240 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2023-11-27T20:35:27.276+08:00  INFO 5240 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@51e92e65
-2023-11-27T20:35:27.276+08:00  INFO 5240 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2023-11-27T20:35:27.276+08:00  INFO 5240 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/pos_app'
-2023-11-27T20:35:27.288+08:00  INFO 5240 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-11-27T20:35:27.305+08:00  INFO 5240 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2023-11-27T20:35:27.397+08:00  INFO 5240 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-11-27T20:35:27.397+08:00  INFO 5240 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-11-27T20:35:27.424+08:00  WARN 5240 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-11-27T20:35:27.478+08:00  WARN 5240 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2023-11-27T20:35:28.486+08:00  INFO 5240 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2023-11-27T20:35:28.501+08:00  INFO 5240 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2023-11-27T20:35:29.509+08:00  INFO 5240 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2023-11-27T20:35:29.518+08:00  WARN 5240 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-11-27T20:35:29.527+08:00  INFO 5240 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 57914 (http) with context path ''
-2023-11-27T20:35:29.528+08:00  INFO 5240 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 57914
-2023-11-27T20:35:29.528+08:00  INFO 5240 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2023-11-27T20:35:29.529+08:00  INFO 5240 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2023-11-27T20:35:29.529+08:00  INFO 5240 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-11-27T20:35:29.530+08:00  INFO 5240 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2023-11-27T20:35:29.530+08:00  INFO 5240 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2023-11-27T20:35:29.530+08:00  INFO 5240 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2023-11-27T20:35:29.530+08:00  INFO 5240 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2023-11-27T20:35:29.530+08:00  INFO 5240 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2023-11-27T20:35:29.530+08:00  INFO 5240 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2023-11-27T20:35:29.530+08:00  INFO 5240 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2023-11-27T20:35:29.621+08:00  INFO 5240 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2023-11-27T20:35:29.622+08:00  INFO 5240 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2023-11-27T20:35:29.622+08:00  INFO 5240 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2023-11-27T20:35:29.622+08:00  INFO 5240 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1701088529622 with initial instances count: 2
-2023-11-27T20:35:29.623+08:00  INFO 5240 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PRODUCTS-WS with eureka with status UP
-2023-11-27T20:35:29.623+08:00  INFO 5240 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1701088529623, current=UP, previous=STARTING]
-2023-11-27T20:35:29.623+08:00  INFO 5240 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/localhost:products-ws:0: registering service...
-2023-11-27T20:35:29.707+08:00  INFO 5240 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/localhost:products-ws:0 - registration status: 204
-2023-11-27T20:35:30.629+08:00  INFO 5240 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2023-11-27T20:35:30.636+08:00  INFO 5240 --- [restartedMain] c.j.P.PosAppApiProductsApplication       : Started PosAppApiProductsApplication in 7.45 seconds (process running for 2471.083)
-2023-11-27T20:35:30.637+08:00  INFO 5240 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2023-11-27T20:36:39.504+08:00  INFO 5240 --- [RMI TCP Connection(58)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2023-11-27T20:36:39.506+08:00  INFO 5240 --- [RMI TCP Connection(58)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PRODUCTS-WS with eureka with status DOWN
-2023-11-27T20:36:39.506+08:00  INFO 5240 --- [RMI TCP Connection(58)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1701088599506, current=DOWN, previous=UP]
-2023-11-27T20:36:39.506+08:00  INFO 5240 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/localhost:products-ws:0: registering service...
-2023-11-27T20:36:39.509+08:00  INFO 5240 --- [RMI TCP Connection(58)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-11-27T20:36:39.527+08:00  INFO 5240 --- [RMI TCP Connection(58)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-11-27T20:36:39.529+08:00  INFO 5240 --- [RMI TCP Connection(58)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
-2023-11-27T20:36:39.530+08:00  INFO 5240 --- [RMI TCP Connection(58)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
-2023-11-27T20:36:39.530+08:00  INFO 5240 --- [RMI TCP Connection(58)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2023-11-27T20:36:39.600+08:00  INFO 5240 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/localhost:products-ws:0 - registration status: 204
-2023-11-27T20:36:39.601+08:00  INFO 5240 --- [RMI TCP Connection(58)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2023-11-27T20:36:39.680+08:00  INFO 5240 --- [RMI TCP Connection(58)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/localhost:products-ws:0 - deregister  status: 200
-2023-11-27T20:36:39.681+08:00  INFO 5240 --- [RMI TCP Connection(58)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2023-11-27T20:47:44.138+08:00  INFO 6235 --- [restartedMain] c.j.P.PosAppApiProductsApplication       : Starting PosAppApiProductsApplication using Java 17.0.8 with PID 6235 (/Users/kevingilsoriano/git/PosAppApiProducts/target/classes started by kevingilsoriano in /Users/kevingilsoriano/git/PosAppApiProducts)
-2023-11-27T20:47:44.139+08:00  INFO 6235 --- [restartedMain] c.j.P.PosAppApiProductsApplication       : No active profile set, falling back to 1 default profile: "default"
-2023-11-27T20:47:44.160+08:00  INFO 6235 --- [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8012
-2023-11-27T20:47:44.160+08:00  INFO 6235 --- [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=products-ws, profiles=[default], label=null, version=01a2d36c2dc28d77f28554e981d3ddc0fcc39f19, state=null
-2023-11-27T20:47:44.160+08:00  INFO 6235 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-11-27T20:47:44.160+08:00  INFO 6235 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-11-27T20:47:44.436+08:00  INFO 6235 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-11-27T20:47:44.513+08:00  INFO 6235 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 1 JPA repository interfaces.
-2023-11-27T20:47:44.612+08:00  INFO 6235 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=fc3baddf-d51c-330b-b451-16a94ec13db0
-2023-11-27T20:47:44.885+08:00  INFO 6235 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
-2023-11-27T20:47:44.889+08:00  INFO 6235 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-27T20:47:44.889+08:00  INFO 6235 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
-2023-11-27T20:47:44.915+08:00  INFO 6235 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-27T20:47:44.916+08:00  INFO 6235 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 755 ms
-2023-11-27T20:47:44.929+08:00  INFO 6235 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-11-27T20:47:45.023+08:00  INFO 6235 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@126caac
-2023-11-27T20:47:45.024+08:00  INFO 6235 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-11-27T20:47:45.029+08:00  INFO 6235 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/pos_app'
-2023-11-27T20:47:45.076+08:00  INFO 6235 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-11-27T20:47:45.101+08:00  INFO 6235 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-11-27T20:47:45.245+08:00  INFO 6235 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2023-11-27T20:47:45.648+08:00  INFO 6235 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-11-27T20:47:45.652+08:00  INFO 6235 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-11-27T20:47:45.771+08:00  WARN 6235 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-11-27T20:47:45.919+08:00  WARN 6235 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2023-11-27T20:47:45.934+08:00  INFO 6235 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2023-11-27T20:47:45.953+08:00  WARN 6235 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-11-27T20:47:45.977+08:00  INFO 6235 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 59499 (http) with context path ''
-2023-11-27T20:47:45.977+08:00  INFO 6235 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 59499
-2023-11-27T20:47:45.979+08:00  INFO 6235 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2023-11-27T20:47:45.993+08:00  INFO 6235 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2023-11-27T20:47:45.994+08:00  INFO 6235 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-11-27T20:47:46.003+08:00  INFO 6235 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2023-11-27T20:47:46.003+08:00  INFO 6235 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2023-11-27T20:47:46.003+08:00  INFO 6235 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2023-11-27T20:47:46.003+08:00  INFO 6235 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2023-11-27T20:47:46.003+08:00  INFO 6235 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2023-11-27T20:47:46.003+08:00  INFO 6235 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2023-11-27T20:47:46.003+08:00  INFO 6235 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2023-11-27T20:47:46.185+08:00  INFO 6235 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2023-11-27T20:47:46.186+08:00  INFO 6235 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2023-11-27T20:47:46.187+08:00  INFO 6235 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2023-11-27T20:47:46.188+08:00  INFO 6235 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1701089266188 with initial instances count: 2
-2023-11-27T20:47:46.190+08:00  INFO 6235 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PRODUCTS-WS with eureka with status UP
-2023-11-27T20:47:46.190+08:00  INFO 6235 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1701089266190, current=UP, previous=STARTING]
-2023-11-27T20:47:46.190+08:00  INFO 6235 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/192.168.1.8:products-ws:0: registering service...
-2023-11-27T20:47:46.198+08:00  INFO 6235 --- [restartedMain] c.j.P.PosAppApiProductsApplication       : Started PosAppApiProductsApplication in 4.933 seconds (process running for 5.492)
-2023-11-27T20:47:46.287+08:00  INFO 6235 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/192.168.1.8:products-ws:0 - registration status: 204
-2023-11-27T20:52:46.029+08:00  INFO 6235 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-11-27T20:57:46.038+08:00  INFO 6235 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-11-27T21:12:02.191+08:00  WARN 6235 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m16s909ms).
-2023-11-27T21:13:32.945+08:00  INFO 6235 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-11-27T21:18:32.952+08:00  INFO 6235 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-11-27T21:23:32.955+08:00  INFO 6235 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-11-27T21:28:32.962+08:00  INFO 6235 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-11-27T21:28:37.078+08:00  INFO 6235 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-11-27T21:28:37.078+08:00  INFO 6235 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-11-27T21:28:37.081+08:00  INFO 6235 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2023-11-27T21:33:32.988+08:00  INFO 6235 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-11-27T21:38:32.997+08:00  INFO 6235 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-11-27T21:43:33.005+08:00  INFO 6235 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-11-27T21:43:52.193+08:00  INFO 6235 --- [RMI TCP Connection(56)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2023-11-27T21:43:52.196+08:00  INFO 6235 --- [RMI TCP Connection(56)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PRODUCTS-WS with eureka with status DOWN
-2023-11-27T21:43:52.196+08:00  INFO 6235 --- [RMI TCP Connection(56)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1701092632196, current=DOWN, previous=UP]
-2023-11-27T21:43:52.197+08:00  INFO 6235 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/192.168.1.8:products-ws:0: registering service...
-2023-11-27T21:43:52.204+08:00  INFO 6235 --- [RMI TCP Connection(56)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-11-27T21:43:52.205+08:00  INFO 6235 --- [RMI TCP Connection(56)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-11-27T21:43:52.216+08:00  INFO 6235 --- [RMI TCP Connection(56)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-11-27T21:43:52.229+08:00  INFO 6235 --- [RMI TCP Connection(56)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-11-27T21:43:52.235+08:00  INFO 6235 --- [RMI TCP Connection(56)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-11-27T21:43:52.235+08:00  INFO 6235 --- [RMI TCP Connection(56)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2023-11-27T21:43:52.296+08:00  INFO 6235 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/192.168.1.8:products-ws:0 - registration status: 204
-2023-11-27T21:43:52.297+08:00  INFO 6235 --- [RMI TCP Connection(56)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2023-11-27T21:43:52.379+08:00  INFO 6235 --- [RMI TCP Connection(56)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/192.168.1.8:products-ws:0 - deregister  status: 200
-2023-11-27T21:43:52.381+08:00  INFO 6235 --- [RMI TCP Connection(56)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2023-11-27T21:43:59.830+08:00  INFO 6940 --- [restartedMain] c.j.P.PosAppApiProductsApplication       : Starting PosAppApiProductsApplication using Java 17.0.8 with PID 6940 (/Users/kevingilsoriano/git/PosAppApiProducts/target/classes started by kevingilsoriano in /Users/kevingilsoriano/git/PosAppApiProducts)
-2023-11-27T21:43:59.832+08:00  INFO 6940 --- [restartedMain] c.j.P.PosAppApiProductsApplication       : No active profile set, falling back to 1 default profile: "default"
-2023-11-27T21:43:59.849+08:00  INFO 6940 --- [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8012
-2023-11-27T21:43:59.849+08:00  INFO 6940 --- [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=products-ws, profiles=[default], label=null, version=01a2d36c2dc28d77f28554e981d3ddc0fcc39f19, state=null
-2023-11-27T21:43:59.849+08:00  INFO 6940 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-11-27T21:43:59.849+08:00  INFO 6940 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-11-27T21:44:00.124+08:00  INFO 6940 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-11-27T21:44:00.188+08:00  INFO 6940 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 1 JPA repository interfaces.
-2023-11-27T21:44:00.274+08:00  INFO 6940 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=fc3baddf-d51c-330b-b451-16a94ec13db0
-2023-11-27T21:44:00.509+08:00  INFO 6940 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
-2023-11-27T21:44:00.514+08:00  INFO 6940 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-11-27T21:44:00.514+08:00  INFO 6940 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
-2023-11-27T21:44:00.546+08:00  INFO 6940 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-11-27T21:44:00.547+08:00  INFO 6940 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 697 ms
-2023-11-27T21:44:00.561+08:00  INFO 6940 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-11-27T21:44:00.652+08:00  INFO 6940 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@172b280a
-2023-11-27T21:44:00.653+08:00  INFO 6940 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-11-27T21:44:00.658+08:00  INFO 6940 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/pos_app'
-2023-11-27T21:44:00.709+08:00  INFO 6940 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-11-27T21:44:00.736+08:00  INFO 6940 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-11-27T21:44:00.884+08:00  INFO 6940 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2023-11-27T21:44:01.323+08:00  INFO 6940 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-11-27T21:44:01.328+08:00  INFO 6940 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-11-27T21:44:01.492+08:00  WARN 6940 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-11-27T21:44:01.652+08:00  WARN 6940 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2023-11-27T21:44:01.667+08:00  INFO 6940 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2023-11-27T21:44:01.688+08:00  WARN 6940 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2023-11-27T21:44:01.715+08:00  INFO 6940 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 65189 (http) with context path ''
-2023-11-27T21:44:01.715+08:00  INFO 6940 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 65189
-2023-11-27T21:44:01.718+08:00  INFO 6940 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2023-11-27T21:44:01.733+08:00  INFO 6940 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2023-11-27T21:44:01.735+08:00  INFO 6940 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-11-27T21:44:01.745+08:00  INFO 6940 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2023-11-27T21:44:01.746+08:00  INFO 6940 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2023-11-27T21:44:01.746+08:00  INFO 6940 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2023-11-27T21:44:01.746+08:00  INFO 6940 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2023-11-27T21:44:01.746+08:00  INFO 6940 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2023-11-27T21:44:01.746+08:00  INFO 6940 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2023-11-27T21:44:01.746+08:00  INFO 6940 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2023-11-27T21:44:01.943+08:00  INFO 6940 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2023-11-27T21:44:01.944+08:00  INFO 6940 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2023-11-27T21:44:01.945+08:00  INFO 6940 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2023-11-27T21:44:01.947+08:00  INFO 6940 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1701092641947 with initial instances count: 3
-2023-11-27T21:44:01.949+08:00  INFO 6940 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PRODUCTS-WS with eureka with status UP
-2023-11-27T21:44:01.949+08:00  INFO 6940 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1701092641949, current=UP, previous=STARTING]
-2023-11-27T21:44:01.949+08:00  INFO 6940 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/192.168.1.8:products-ws:0: registering service...
-2023-11-27T21:44:01.957+08:00  INFO 6940 --- [restartedMain] c.j.P.PosAppApiProductsApplication       : Started PosAppApiProductsApplication in 5.121 seconds (process running for 6.09)
-2023-11-27T21:44:02.055+08:00  INFO 6940 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/192.168.1.8:products-ws:0 - registration status: 204
-2023-11-27T21:49:01.719+08:00  INFO 6940 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-11-27T21:54:01.723+08:00  INFO 6940 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-11-27T21:59:01.731+08:00  INFO 6940 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-11-27T22:00:10.274+08:00  INFO 6940 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-11-27T22:00:10.275+08:00  INFO 6940 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-11-27T22:00:10.277+08:00  INFO 6940 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2023-11-27T22:04:01.734+08:00  INFO 6940 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-11-27T22:09:01.742+08:00  INFO 6940 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2023-11-27T22:14:01.746+08:00  INFO 6940 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T00:04:11.804+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T00:09:11.839+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T00:14:11.850+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T00:19:11.851+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T00:24:11.856+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T00:29:11.866+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T00:34:11.872+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T00:39:11.882+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T00:44:11.891+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T00:49:11.902+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T00:54:11.914+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T00:59:11.920+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T01:04:11.928+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T01:09:11.937+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T01:14:11.948+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T01:19:11.960+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T01:20:38.154+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54s911ms).
+2023-12-17T01:37:03.118+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m54s961ms).
+2023-12-17T01:54:28.100+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m54s967ms).
+2023-12-17T01:55:26.808+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T02:12:23.136+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m54s973ms).
+2023-12-17T02:29:42.513+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m49s356ms).
+2023-12-17T02:31:11.141+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T02:47:07.577+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s22ms).
+2023-12-17T03:07:01.217+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T03:07:02.686+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s49ms).
+2023-12-17T03:15:47.375+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m14s644ms).
+2023-12-17T03:33:35.946+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m48s518ms).
+2023-12-17T03:34:04.415+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T03:51:00.969+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s7ms).
+2023-12-17T03:53:55.962+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54s951ms).
+2023-12-17T03:54:54.391+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T04:11:07.679+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m41s688ms).
+2023-12-17T04:17:12.947+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m5s269ms).
+2023-12-17T04:18:41.313+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T04:21:37.930+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54s938ms).
+2023-12-17T04:39:14.397+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T04:39:16.109+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m38s151ms).
+2023-12-17T04:41:41.071+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54s939ms).
+2023-12-17T04:44:06.028+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54s921ms).
+2023-12-17T04:45:04.281+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T05:01:49.343+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m43s285ms).
+2023-12-17T05:04:14.291+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54s922ms).
+2023-12-17T05:05:42.492+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T05:17:16.075+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m1s750ms).
+2023-12-17T05:36:44.359+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T05:36:46.243+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m123ms).
+2023-12-17T05:54:41.284+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s9ms).
+2023-12-17T06:12:06.318+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s10ms).
+2023-12-17T06:12:34.371+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T06:15:01.295+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54s933ms).
+2023-12-17T06:18:07.761+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m36s447ms).
+2023-12-17T06:19:05.749+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T06:35:57.557+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m49s768ms).
+2023-12-17T06:53:39.957+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m42s398ms).
+2023-12-17T06:54:37.880+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T07:11:04.981+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s11ms).
+2023-12-17T07:18:54.888+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m19s857ms).
+2023-12-17T07:20:52.781+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T07:36:49.930+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s7ms).
+2023-12-17T07:54:14.898+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m54s949ms).
+2023-12-17T07:56:42.736+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T08:14:09.904+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m54s964ms).
+2023-12-17T08:19:59.882+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m19s962ms).
+2023-12-17T08:20:57.674+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T08:37:54.921+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m54s990ms).
+2023-12-17T08:55:19.893+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m54s953ms).
+2023-12-17T08:56:47.620+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T09:13:14.869+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m54s950ms).
+2023-12-17T09:21:07.006+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m22s145ms).
+2023-12-17T09:23:04.651+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T09:40:28.090+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m51s55ms).
+2023-12-17T09:58:23.159+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s2ms).
+2023-12-17T09:58:50.766+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T10:15:48.171+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m54s967ms).
+2023-12-17T10:22:13.307+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m25s110ms).
+2023-12-17T10:23:10.842+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T10:39:38.345+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s14ms).
+2023-12-17T10:43:35.893+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T10:48:35.905+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T10:53:35.915+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T10:58:35.924+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T11:03:35.934+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T11:06:00.257+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=51s632ms).
+2023-12-17T11:08:57.577+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T11:13:57.586+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T11:18:57.598+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T11:23:57.606+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T11:25:55.342+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54s901ms).
+2023-12-17T11:42:20.328+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m54s971ms).
+2023-12-17T11:59:45.352+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m54s990ms).
+2023-12-17T12:00:12.458+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T12:17:40.365+08:00  WARN 7318 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m54s994ms).
+2023-12-17T12:20:37.459+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T12:25:37.475+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T12:30:37.485+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T12:35:37.496+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T12:40:37.507+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T12:45:37.518+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T12:50:37.526+08:00  INFO 7318 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T12:51:19.573+08:00  INFO 7318 --- [RMI TCP Connection(618)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-12-17T12:51:19.578+08:00  INFO 7318 --- [RMI TCP Connection(618)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PRODUCTS-WS with eureka with status DOWN
+2023-12-17T12:51:19.578+08:00  INFO 7318 --- [RMI TCP Connection(618)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1702788679578, current=DOWN, previous=UP]
+2023-12-17T12:51:19.578+08:00  INFO 7318 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/localhost:products-ws:0: registering service...
+2023-12-17T12:51:19.587+08:00  INFO 7318 --- [RMI TCP Connection(618)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-12-17T12:51:19.590+08:00  INFO 7318 --- [RMI TCP Connection(618)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-12-17T12:51:19.604+08:00  INFO 7318 --- [RMI TCP Connection(618)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-17T12:51:19.609+08:00  INFO 7318 --- [RMI TCP Connection(618)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-17T12:51:19.610+08:00  INFO 7318 --- [RMI TCP Connection(618)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-17T12:51:19.611+08:00  INFO 7318 --- [RMI TCP Connection(618)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2023-12-17T12:51:19.676+08:00  INFO 7318 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/localhost:products-ws:0 - registration status: 204
+2023-12-17T12:51:19.677+08:00  INFO 7318 --- [RMI TCP Connection(618)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2023-12-17T12:51:19.761+08:00  INFO 7318 --- [RMI TCP Connection(618)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/localhost:products-ws:0 - deregister  status: 200
+2023-12-17T12:51:19.762+08:00  INFO 7318 --- [RMI TCP Connection(618)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2023-12-17T12:59:07.484+08:00  INFO 19151 --- [restartedMain] c.j.P.PosAppApiProductsApplication       : Starting PosAppApiProductsApplication using Java 17.0.8 with PID 19151 (/Users/kevingilsoriano/git/PosAppApiProducts/target/classes started by kevingilsoriano in /Users/kevingilsoriano/git/PosAppApiProducts)
+2023-12-17T12:59:07.485+08:00  INFO 19151 --- [restartedMain] c.j.P.PosAppApiProductsApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-12-17T12:59:07.500+08:00  INFO 19151 --- [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8012
+2023-12-17T12:59:07.500+08:00  INFO 19151 --- [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=products-ws, profiles=[default], label=null, version=01a2d36c2dc28d77f28554e981d3ddc0fcc39f19, state=null
+2023-12-17T12:59:07.501+08:00  INFO 19151 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-17T12:59:07.501+08:00  INFO 19151 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-17T12:59:07.749+08:00  INFO 19151 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-17T12:59:07.806+08:00  INFO 19151 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 1 JPA repository interfaces.
+2023-12-17T12:59:07.882+08:00  INFO 19151 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=fc3baddf-d51c-330b-b451-16a94ec13db0
+2023-12-17T12:59:08.118+08:00  INFO 19151 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-12-17T12:59:08.122+08:00  INFO 19151 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-17T12:59:08.123+08:00  INFO 19151 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-17T12:59:08.149+08:00  INFO 19151 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-17T12:59:08.149+08:00  INFO 19151 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 648 ms
+2023-12-17T12:59:08.163+08:00  INFO 19151 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-17T12:59:08.246+08:00  INFO 19151 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1ba02ea4
+2023-12-17T12:59:08.247+08:00  INFO 19151 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-17T12:59:08.251+08:00  INFO 19151 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/pos_app_products'
+2023-12-17T12:59:08.296+08:00  INFO 19151 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-17T12:59:08.320+08:00  INFO 19151 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-12-17T12:59:08.456+08:00  INFO 19151 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-12-17T12:59:08.844+08:00  INFO 19151 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-12-17T12:59:08.848+08:00  INFO 19151 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-17T12:59:08.968+08:00  WARN 19151 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-17T12:59:09.109+08:00  WARN 19151 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-12-17T12:59:10.119+08:00  INFO 19151 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-12-17T12:59:10.148+08:00  INFO 19151 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2023-12-17T12:59:11.162+08:00  INFO 19151 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-12-17T12:59:11.213+08:00  WARN 19151 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-12-17T12:59:11.247+08:00  INFO 19151 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 52691 (http) with context path ''
+2023-12-17T12:59:11.247+08:00  INFO 19151 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 52691
+2023-12-17T12:59:11.249+08:00  INFO 19151 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2023-12-17T12:59:11.263+08:00  INFO 19151 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2023-12-17T12:59:11.265+08:00  INFO 19151 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T12:59:11.273+08:00  INFO 19151 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2023-12-17T12:59:11.273+08:00  INFO 19151 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2023-12-17T12:59:11.273+08:00  INFO 19151 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2023-12-17T12:59:11.273+08:00  INFO 19151 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2023-12-17T12:59:11.273+08:00  INFO 19151 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2023-12-17T12:59:11.273+08:00  INFO 19151 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2023-12-17T12:59:11.273+08:00  INFO 19151 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2023-12-17T12:59:11.468+08:00  INFO 19151 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2023-12-17T12:59:11.469+08:00  INFO 19151 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2023-12-17T12:59:11.470+08:00  INFO 19151 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-12-17T12:59:11.471+08:00  INFO 19151 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1702789151471 with initial instances count: 2
+2023-12-17T12:59:11.473+08:00  INFO 19151 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PRODUCTS-WS with eureka with status UP
+2023-12-17T12:59:11.473+08:00  INFO 19151 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1702789151473, current=UP, previous=STARTING]
+2023-12-17T12:59:11.474+08:00  INFO 19151 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/localhost:products-ws:0: registering service...
+2023-12-17T12:59:11.569+08:00  INFO 19151 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/localhost:products-ws:0 - registration status: 204
+2023-12-17T12:59:12.479+08:00  INFO 19151 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2023-12-17T12:59:12.496+08:00  INFO 19151 --- [restartedMain] c.j.P.PosAppApiProductsApplication       : Started PosAppApiProductsApplication in 7.875 seconds (process running for 8.414)
+2023-12-17T13:02:51.605+08:00  INFO 19151 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-17T13:02:51.609+08:00  INFO 19151 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-17T13:02:51.612+08:00  INFO 19151 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-12-17T13:02:51.668+08:00 ERROR 19151 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.modelmapper.MappingException: ModelMapper mapping errors:
+
+1) Converter org.modelmapper.internal.converter.NumberConverter@1ebd1c5e failed to convert java.lang.String to long.
+
+1 error] with root cause
+
+java.lang.NumberFormatException: For input string: "first outlet"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[na:na]
+	at java.base/java.lang.Long.parseLong(Long.java:711) ~[na:na]
+	at java.base/java.lang.Long.valueOf(Long.java:1163) ~[na:na]
+	at org.modelmapper.internal.converter.NumberConverter.numberFor(NumberConverter.java:171) ~[modelmapper-3.1.1.jar:na]
+	at org.modelmapper.internal.converter.NumberConverter.convert(NumberConverter.java:75) ~[modelmapper-3.1.1.jar:na]
+	at org.modelmapper.internal.converter.NumberConverter.convert(NumberConverter.java:57) ~[modelmapper-3.1.1.jar:na]
+	at org.modelmapper.internal.MappingEngineImpl.convert(MappingEngineImpl.java:306) ~[modelmapper-3.1.1.jar:na]
+	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:109) ~[modelmapper-3.1.1.jar:na]
+	at org.modelmapper.internal.MappingEngineImpl.setDestinationValue(MappingEngineImpl.java:245) ~[modelmapper-3.1.1.jar:na]
+	at org.modelmapper.internal.MappingEngineImpl.propertyMap(MappingEngineImpl.java:187) ~[modelmapper-3.1.1.jar:na]
+	at org.modelmapper.internal.MappingEngineImpl.typeMap(MappingEngineImpl.java:151) ~[modelmapper-3.1.1.jar:na]
+	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:114) ~[modelmapper-3.1.1.jar:na]
+	at org.modelmapper.internal.converter.MergingCollectionConverter.convert(MergingCollectionConverter.java:59) ~[modelmapper-3.1.1.jar:na]
+	at org.modelmapper.internal.converter.MergingCollectionConverter.convert(MergingCollectionConverter.java:31) ~[modelmapper-3.1.1.jar:na]
+	at org.modelmapper.internal.MappingEngineImpl.convert(MappingEngineImpl.java:306) ~[modelmapper-3.1.1.jar:na]
+	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:109) ~[modelmapper-3.1.1.jar:na]
+	at org.modelmapper.internal.MappingEngineImpl.setDestinationValue(MappingEngineImpl.java:245) ~[modelmapper-3.1.1.jar:na]
+	at org.modelmapper.internal.MappingEngineImpl.propertyMap(MappingEngineImpl.java:187) ~[modelmapper-3.1.1.jar:na]
+	at org.modelmapper.internal.MappingEngineImpl.typeMap(MappingEngineImpl.java:151) ~[modelmapper-3.1.1.jar:na]
+	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:114) ~[modelmapper-3.1.1.jar:na]
+	at org.modelmapper.internal.converter.MergingCollectionConverter.convert(MergingCollectionConverter.java:59) ~[modelmapper-3.1.1.jar:na]
+	at org.modelmapper.internal.converter.MergingCollectionConverter.convert(MergingCollectionConverter.java:31) ~[modelmapper-3.1.1.jar:na]
+	at org.modelmapper.internal.MappingEngineImpl.convert(MappingEngineImpl.java:306) ~[modelmapper-3.1.1.jar:na]
+	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:109) ~[modelmapper-3.1.1.jar:na]
+	at org.modelmapper.internal.MappingEngineImpl.setDestinationValue(MappingEngineImpl.java:245) ~[modelmapper-3.1.1.jar:na]
+	at org.modelmapper.internal.MappingEngineImpl.propertyMap(MappingEngineImpl.java:187) ~[modelmapper-3.1.1.jar:na]
+	at org.modelmapper.internal.MappingEngineImpl.typeMap(MappingEngineImpl.java:151) ~[modelmapper-3.1.1.jar:na]
+	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:114) ~[modelmapper-3.1.1.jar:na]
+	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:71) ~[modelmapper-3.1.1.jar:na]
+	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:589) ~[modelmapper-3.1.1.jar:na]
+	at org.modelmapper.ModelMapper.map(ModelMapper.java:422) ~[modelmapper-3.1.1.jar:na]
+	at com.jkngil.PosAppApiProducts.services.ProductServiceImpl.createProduct(ProductServiceImpl.java:41) ~[classes/:na]
+	at com.jkngil.PosAppApiProducts.controllers.ProductController.createProduct(ProductController.java:39) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:563) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2023-12-17T13:04:11.287+08:00  INFO 19151 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T13:04:27.445+08:00  INFO 19151 --- [RMI TCP Connection(13)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-12-17T13:04:27.450+08:00  INFO 19151 --- [RMI TCP Connection(13)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PRODUCTS-WS with eureka with status DOWN
+2023-12-17T13:04:27.450+08:00  INFO 19151 --- [RMI TCP Connection(13)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1702789467450, current=DOWN, previous=UP]
+2023-12-17T13:04:27.450+08:00  INFO 19151 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/localhost:products-ws:0: registering service...
+2023-12-17T13:04:27.473+08:00  INFO 19151 --- [RMI TCP Connection(13)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-12-17T13:04:27.474+08:00  INFO 19151 --- [RMI TCP Connection(13)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-12-17T13:04:27.486+08:00  INFO 19151 --- [RMI TCP Connection(13)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-17T13:04:27.490+08:00  INFO 19151 --- [RMI TCP Connection(13)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-17T13:04:27.492+08:00  INFO 19151 --- [RMI TCP Connection(13)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-17T13:04:27.493+08:00  INFO 19151 --- [RMI TCP Connection(13)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2023-12-17T13:04:27.558+08:00  INFO 19151 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/localhost:products-ws:0 - registration status: 204
+2023-12-17T13:04:27.559+08:00  INFO 19151 --- [RMI TCP Connection(13)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2023-12-17T13:04:27.639+08:00  INFO 19151 --- [RMI TCP Connection(13)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/localhost:products-ws:0 - deregister  status: 200
+2023-12-17T13:04:27.642+08:00  INFO 19151 --- [RMI TCP Connection(13)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2023-12-17T13:04:42.527+08:00  INFO 19370 --- [restartedMain] c.j.P.PosAppApiProductsApplication       : Starting PosAppApiProductsApplication using Java 17.0.8 with PID 19370 (/Users/kevingilsoriano/git/PosAppApiProducts/target/classes started by kevingilsoriano in /Users/kevingilsoriano/git/PosAppApiProducts)
+2023-12-17T13:04:42.528+08:00  INFO 19370 --- [restartedMain] c.j.P.PosAppApiProductsApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-12-17T13:04:42.545+08:00  INFO 19370 --- [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8012
+2023-12-17T13:04:42.545+08:00  INFO 19370 --- [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=products-ws, profiles=[default], label=null, version=01a2d36c2dc28d77f28554e981d3ddc0fcc39f19, state=null
+2023-12-17T13:04:42.545+08:00  INFO 19370 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-17T13:04:42.545+08:00  INFO 19370 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-17T13:04:42.809+08:00  INFO 19370 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-17T13:04:42.872+08:00  INFO 19370 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 1 JPA repository interfaces.
+2023-12-17T13:04:42.951+08:00  INFO 19370 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=fc3baddf-d51c-330b-b451-16a94ec13db0
+2023-12-17T13:04:43.201+08:00  INFO 19370 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-12-17T13:04:43.205+08:00  INFO 19370 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-17T13:04:43.206+08:00  INFO 19370 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-17T13:04:43.233+08:00  INFO 19370 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-17T13:04:43.233+08:00  INFO 19370 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 687 ms
+2023-12-17T13:04:43.248+08:00  INFO 19370 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-17T13:04:43.344+08:00  INFO 19370 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@f6f18da
+2023-12-17T13:04:43.345+08:00  INFO 19370 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-17T13:04:43.350+08:00  INFO 19370 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/pos_app_products'
+2023-12-17T13:04:43.396+08:00  INFO 19370 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-17T13:04:43.424+08:00  INFO 19370 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-12-17T13:04:43.569+08:00  INFO 19370 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-12-17T13:04:44.003+08:00  INFO 19370 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-12-17T13:04:44.008+08:00  INFO 19370 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-17T13:04:44.134+08:00  WARN 19370 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-17T13:04:44.288+08:00  WARN 19370 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-12-17T13:04:44.303+08:00  INFO 19370 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2023-12-17T13:04:44.323+08:00  WARN 19370 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-12-17T13:04:44.347+08:00  INFO 19370 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 53379 (http) with context path ''
+2023-12-17T13:04:44.348+08:00  INFO 19370 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 53379
+2023-12-17T13:04:44.350+08:00  INFO 19370 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2023-12-17T13:04:44.363+08:00  INFO 19370 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2023-12-17T13:04:44.365+08:00  INFO 19370 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T13:04:44.374+08:00  INFO 19370 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2023-12-17T13:04:44.374+08:00  INFO 19370 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2023-12-17T13:04:44.374+08:00  INFO 19370 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2023-12-17T13:04:44.374+08:00  INFO 19370 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2023-12-17T13:04:44.374+08:00  INFO 19370 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2023-12-17T13:04:44.374+08:00  INFO 19370 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2023-12-17T13:04:44.374+08:00  INFO 19370 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2023-12-17T13:04:44.562+08:00  INFO 19370 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2023-12-17T13:04:44.563+08:00  INFO 19370 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2023-12-17T13:04:44.564+08:00  INFO 19370 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-12-17T13:04:44.566+08:00  INFO 19370 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1702789484566 with initial instances count: 4
+2023-12-17T13:04:44.567+08:00  INFO 19370 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PRODUCTS-WS with eureka with status UP
+2023-12-17T13:04:44.567+08:00  INFO 19370 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1702789484567, current=UP, previous=STARTING]
+2023-12-17T13:04:44.568+08:00  INFO 19370 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/localhost:products-ws:0: registering service...
+2023-12-17T13:04:44.575+08:00  INFO 19370 --- [restartedMain] c.j.P.PosAppApiProductsApplication       : Started PosAppApiProductsApplication in 11.113 seconds (process running for 11.626)
+2023-12-17T13:04:44.672+08:00  INFO 19370 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/localhost:products-ws:0 - registration status: 204
+2023-12-17T13:09:27.065+08:00  INFO 19370 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-17T13:09:27.066+08:00  INFO 19370 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-17T13:09:27.069+08:00  INFO 19370 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-12-17T13:09:27.177+08:00  WARN 19370 --- [http-nio-auto-1-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 42804
+2023-12-17T13:09:27.177+08:00 ERROR 19370 --- [http-nio-auto-1-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: column "outlet_name" is of type bigint but expression is of type character varying
+  Hint: You will need to rewrite or cast the expression.
+  Position: 120
+2023-12-17T13:09:27.190+08:00 ERROR 19370 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.InvalidDataAccessResourceUsageException: could not execute statement; SQL [n/a]] with root cause
+
+org.postgresql.util.PSQLException: ERROR: column "outlet_name" is of type bigint but expression is of type character varying
+  Hint: You will need to rewrite or cast the expression.
+  Position: 120
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676) ~[postgresql-42.5.4.jar:42.5.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366) ~[postgresql-42.5.4.jar:42.5.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356) ~[postgresql-42.5.4.jar:42.5.4]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496) ~[postgresql-42.5.4.jar:42.5.4]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413) ~[postgresql-42.5.4.jar:42.5.4]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190) ~[postgresql-42.5.4.jar:42.5.4]
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:152) ~[postgresql-42.5.4.jar:42.5.4]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-5.0.1.jar:na]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:57) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:42) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3342) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3980) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:80) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:653) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:283) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:264) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:322) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:340) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:286) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:192) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:122) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:184) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:129) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:118) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:779) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:727) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.engine.spi.CascadingActions$7.cascade(CascadingActions.java:301) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.engine.spi.CascadingActions$7.cascade(CascadingActions.java:291) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.engine.internal.Cascade.cascadeToOne(Cascade.java:513) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.engine.internal.Cascade.cascadeAssociation(Cascade.java:434) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.engine.internal.Cascade.cascadeProperty(Cascade.java:220) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.engine.internal.Cascade.cascadeCollectionElements(Cascade.java:547) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.engine.internal.Cascade.cascadeCollection(Cascade.java:477) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.engine.internal.Cascade.cascadeAssociation(Cascade.java:437) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.engine.internal.Cascade.cascadeProperty(Cascade.java:220) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.engine.internal.Cascade.cascade(Cascade.java:153) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.cascadeAfterSave(AbstractSaveEventListener.java:474) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:298) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:192) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:134) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:184) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:129) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:118) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:779) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:727) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.engine.spi.CascadingActions$7.cascade(CascadingActions.java:301) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.engine.spi.CascadingActions$7.cascade(CascadingActions.java:291) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.engine.internal.Cascade.cascadeToOne(Cascade.java:513) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.engine.internal.Cascade.cascadeAssociation(Cascade.java:434) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.engine.internal.Cascade.cascadeProperty(Cascade.java:220) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.engine.internal.Cascade.cascadeCollectionElements(Cascade.java:547) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.engine.internal.Cascade.cascadeCollection(Cascade.java:477) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.engine.internal.Cascade.cascadeAssociation(Cascade.java:437) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.engine.internal.Cascade.cascadeProperty(Cascade.java:220) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.engine.internal.Cascade.cascade(Cascade.java:153) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.cascadeAfterSave(AbstractSaveEventListener.java:474) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:298) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:192) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:134) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:184) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:129) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:53) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:737) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:721) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:360) ~[spring-orm-6.0.7.jar:6.0.7]
+	at jdk.proxy4/jdk.proxy4.$Proxy129.persist(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:311) ~[spring-orm-6.0.7.jar:6.0.7]
+	at jdk.proxy4/jdk.proxy4.$Proxy129.persist(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:613) ~[spring-data-jpa-3.0.4.jar:3.0.4]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:288) ~[spring-data-commons-3.0.4.jar:3.0.4]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:136) ~[spring-data-commons-3.0.4.jar:3.0.4]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:120) ~[spring-data-commons-3.0.4.jar:3.0.4]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516) ~[spring-data-commons-3.0.4.jar:3.0.4]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285) ~[spring-data-commons-3.0.4.jar:3.0.4]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628) ~[spring-data-commons-3.0.4.jar:3.0.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:168) ~[spring-data-commons-3.0.4.jar:3.0.4]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143) ~[spring-data-commons-3.0.4.jar:3.0.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:391) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:163) ~[spring-data-jpa-3.0.4.jar:3.0.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:218) ~[spring-aop-6.0.7.jar:6.0.7]
+	at jdk.proxy4/jdk.proxy4.$Proxy133.save(Unknown Source) ~[na:na]
+	at com.jkngil.PosAppApiProducts.services.ProductServiceImpl.createProduct(ProductServiceImpl.java:42) ~[classes/:na]
+	at com.jkngil.PosAppApiProducts.controllers.ProductController.createProduct(ProductController.java:39) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:563) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2023-12-17T13:09:39.223+08:00  INFO 19370 --- [RMI TCP Connection(11)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-12-17T13:09:39.227+08:00  INFO 19370 --- [RMI TCP Connection(11)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PRODUCTS-WS with eureka with status DOWN
+2023-12-17T13:09:39.227+08:00  INFO 19370 --- [RMI TCP Connection(11)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1702789779227, current=DOWN, previous=UP]
+2023-12-17T13:09:39.227+08:00  INFO 19370 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/localhost:products-ws:0: registering service...
+2023-12-17T13:09:39.249+08:00  INFO 19370 --- [RMI TCP Connection(11)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-12-17T13:09:39.252+08:00  INFO 19370 --- [RMI TCP Connection(11)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-12-17T13:09:39.260+08:00  INFO 19370 --- [RMI TCP Connection(11)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-17T13:09:39.263+08:00  INFO 19370 --- [RMI TCP Connection(11)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-17T13:09:39.264+08:00  INFO 19370 --- [RMI TCP Connection(11)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-17T13:09:39.264+08:00  INFO 19370 --- [RMI TCP Connection(11)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2023-12-17T13:09:39.325+08:00  INFO 19370 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/localhost:products-ws:0 - registration status: 204
+2023-12-17T13:09:39.326+08:00  INFO 19370 --- [RMI TCP Connection(11)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2023-12-17T13:09:39.406+08:00  INFO 19370 --- [RMI TCP Connection(11)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/localhost:products-ws:0 - deregister  status: 200
+2023-12-17T13:09:39.408+08:00  INFO 19370 --- [RMI TCP Connection(11)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2023-12-17T13:10:10.577+08:00  INFO 19451 --- [restartedMain] c.j.P.PosAppApiProductsApplication       : Starting PosAppApiProductsApplication using Java 17.0.8 with PID 19451 (/Users/kevingilsoriano/git/PosAppApiProducts/target/classes started by kevingilsoriano in /Users/kevingilsoriano/git/PosAppApiProducts)
+2023-12-17T13:10:10.578+08:00  INFO 19451 --- [restartedMain] c.j.P.PosAppApiProductsApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-12-17T13:10:10.598+08:00  INFO 19451 --- [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8012
+2023-12-17T13:10:10.599+08:00  INFO 19451 --- [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=products-ws, profiles=[default], label=null, version=01a2d36c2dc28d77f28554e981d3ddc0fcc39f19, state=null
+2023-12-17T13:10:10.600+08:00  INFO 19451 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-17T13:10:10.600+08:00  INFO 19451 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-17T13:10:10.888+08:00  INFO 19451 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-17T13:10:10.949+08:00  INFO 19451 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 1 JPA repository interfaces.
+2023-12-17T13:10:11.036+08:00  INFO 19451 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=fc3baddf-d51c-330b-b451-16a94ec13db0
+2023-12-17T13:10:11.283+08:00  INFO 19451 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-12-17T13:10:11.287+08:00  INFO 19451 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-17T13:10:11.287+08:00  INFO 19451 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-17T13:10:11.314+08:00  INFO 19451 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-17T13:10:11.314+08:00  INFO 19451 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 714 ms
+2023-12-17T13:10:11.328+08:00  INFO 19451 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-17T13:10:11.418+08:00  INFO 19451 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5ea8e6e1
+2023-12-17T13:10:11.420+08:00  INFO 19451 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-17T13:10:11.425+08:00  INFO 19451 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/pos_app_products'
+2023-12-17T13:10:11.472+08:00  INFO 19451 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-17T13:10:11.497+08:00  INFO 19451 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-12-17T13:10:11.627+08:00  INFO 19451 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-12-17T13:10:12.055+08:00  INFO 19451 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-12-17T13:10:12.060+08:00  INFO 19451 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-17T13:10:12.197+08:00  WARN 19451 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-17T13:10:12.351+08:00  WARN 19451 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-12-17T13:10:12.366+08:00  INFO 19451 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2023-12-17T13:10:12.391+08:00  WARN 19451 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-12-17T13:10:12.415+08:00  INFO 19451 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 53997 (http) with context path ''
+2023-12-17T13:10:12.416+08:00  INFO 19451 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 53997
+2023-12-17T13:10:12.418+08:00  INFO 19451 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2023-12-17T13:10:12.432+08:00  INFO 19451 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2023-12-17T13:10:12.434+08:00  INFO 19451 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T13:10:12.443+08:00  INFO 19451 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2023-12-17T13:10:12.443+08:00  INFO 19451 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2023-12-17T13:10:12.443+08:00  INFO 19451 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2023-12-17T13:10:12.443+08:00  INFO 19451 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2023-12-17T13:10:12.443+08:00  INFO 19451 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2023-12-17T13:10:12.443+08:00  INFO 19451 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2023-12-17T13:10:12.443+08:00  INFO 19451 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2023-12-17T13:10:12.669+08:00  INFO 19451 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2023-12-17T13:10:12.676+08:00  INFO 19451 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2023-12-17T13:10:12.677+08:00  INFO 19451 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-12-17T13:10:12.679+08:00  INFO 19451 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1702789812679 with initial instances count: 3
+2023-12-17T13:10:12.681+08:00  INFO 19451 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PRODUCTS-WS with eureka with status UP
+2023-12-17T13:10:12.681+08:00  INFO 19451 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1702789812681, current=UP, previous=STARTING]
+2023-12-17T13:10:12.682+08:00  INFO 19451 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/localhost:products-ws:0: registering service...
+2023-12-17T13:10:12.691+08:00  INFO 19451 --- [restartedMain] c.j.P.PosAppApiProductsApplication       : Started PosAppApiProductsApplication in 14.514 seconds (process running for 15.041)
+2023-12-17T13:10:12.782+08:00  INFO 19451 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/localhost:products-ws:0 - registration status: 204
+2023-12-17T13:11:10.236+08:00  INFO 19451 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-17T13:11:10.237+08:00  INFO 19451 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-17T13:11:10.239+08:00  INFO 19451 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-12-17T13:15:12.451+08:00  INFO 19451 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T13:20:12.459+08:00  INFO 19451 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T13:25:12.465+08:00  INFO 19451 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T13:30:12.470+08:00  INFO 19451 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T13:33:36.646+08:00  WARN 19451 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54s924ms).
+2023-12-17T13:49:55.893+08:00  WARN 19451 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m49s240ms).
+2023-12-17T13:50:56.638+08:00  INFO 19451 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T14:07:20.909+08:00  WARN 19451 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m54s987ms).
+2023-12-17T14:24:57.583+08:00  WARN 19451 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m36s676ms).
+2023-12-17T14:26:28.284+08:00  INFO 19451 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T14:42:04.203+08:00  WARN 19451 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m36s588ms).
+2023-12-17T14:59:29.204+08:00  WARN 19451 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m54s988ms).
+2023-12-17T15:02:24.144+08:00  WARN 19451 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54s930ms).
+2023-12-17T15:02:24.747+08:00  INFO 19451 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T15:19:49.213+08:00  WARN 19451 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s40ms).
+2023-12-17T15:29:08.971+08:00  WARN 19451 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m19s728ms).
+2023-12-17T15:29:39.519+08:00  INFO 19451 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T15:35:56.890+08:00  WARN 19451 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m17s876ms).
+2023-12-17T15:39:27.376+08:00  INFO 19451 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T15:44:27.384+08:00  INFO 19451 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T15:49:27.390+08:00  INFO 19451 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T15:54:27.393+08:00  INFO 19451 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T16:10:52.022+08:00  WARN 19451 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m54s999ms).
+2023-12-17T16:14:52.359+08:00  INFO 19451 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T16:19:52.360+08:00  INFO 19451 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T16:24:52.365+08:00  INFO 19451 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T16:29:52.368+08:00  INFO 19451 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T16:34:52.371+08:00  INFO 19451 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T16:39:52.374+08:00  INFO 19451 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T16:44:52.378+08:00  INFO 19451 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T16:49:52.381+08:00  INFO 19451 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T16:54:52.383+08:00  INFO 19451 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T16:59:52.401+08:00  INFO 19451 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T17:04:52.409+08:00  INFO 19451 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T17:08:05.491+08:00  INFO 19451 --- [RMI TCP Connection(135)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-12-17T17:08:05.503+08:00  INFO 19451 --- [RMI TCP Connection(135)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PRODUCTS-WS with eureka with status DOWN
+2023-12-17T17:08:05.503+08:00  INFO 19451 --- [RMI TCP Connection(135)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1702804085503, current=DOWN, previous=UP]
+2023-12-17T17:08:05.503+08:00  INFO 19451 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/localhost:products-ws:0: registering service...
+2023-12-17T17:08:05.531+08:00  INFO 19451 --- [RMI TCP Connection(135)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-12-17T17:08:05.533+08:00  INFO 19451 --- [RMI TCP Connection(135)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-12-17T17:08:05.549+08:00  INFO 19451 --- [RMI TCP Connection(135)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-17T17:08:05.556+08:00  INFO 19451 --- [RMI TCP Connection(135)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-17T17:08:05.557+08:00  INFO 19451 --- [RMI TCP Connection(135)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-17T17:08:05.558+08:00  INFO 19451 --- [RMI TCP Connection(135)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2023-12-17T17:08:05.601+08:00  INFO 19451 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/localhost:products-ws:0 - registration status: 204
+2023-12-17T17:08:05.602+08:00  INFO 19451 --- [RMI TCP Connection(135)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2023-12-17T17:08:05.685+08:00  INFO 19451 --- [RMI TCP Connection(135)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/localhost:products-ws:0 - deregister  status: 200
+2023-12-17T17:08:05.688+08:00  INFO 19451 --- [RMI TCP Connection(135)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2023-12-17T17:12:30.531+08:00  INFO 22004 --- [restartedMain] c.j.P.PosAppApiProductsApplication       : Starting PosAppApiProductsApplication using Java 17.0.8 with PID 22004 (/Users/kevingilsoriano/git/PosAppApiProducts/target/classes started by kevingilsoriano in /Users/kevingilsoriano/git/PosAppApiProducts)
+2023-12-17T17:12:30.532+08:00  INFO 22004 --- [restartedMain] c.j.P.PosAppApiProductsApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-12-17T17:12:30.547+08:00  INFO 22004 --- [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8012
+2023-12-17T17:12:30.548+08:00  INFO 22004 --- [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=products-ws, profiles=[default], label=null, version=01a2d36c2dc28d77f28554e981d3ddc0fcc39f19, state=null
+2023-12-17T17:12:30.548+08:00  INFO 22004 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-17T17:12:30.548+08:00  INFO 22004 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-17T17:12:30.916+08:00  INFO 22004 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-17T17:12:30.992+08:00  INFO 22004 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72 ms. Found 1 JPA repository interfaces.
+2023-12-17T17:12:31.092+08:00  INFO 22004 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=fc3baddf-d51c-330b-b451-16a94ec13db0
+2023-12-17T17:12:31.363+08:00  INFO 22004 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-12-17T17:12:31.368+08:00  INFO 22004 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-17T17:12:31.368+08:00  INFO 22004 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-17T17:12:31.401+08:00  INFO 22004 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-17T17:12:31.401+08:00  INFO 22004 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 853 ms
+2023-12-17T17:12:31.416+08:00  INFO 22004 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-17T17:12:31.874+08:00  INFO 22004 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2e87742a
+2023-12-17T17:12:31.875+08:00  INFO 22004 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-17T17:12:31.883+08:00  INFO 22004 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/pos_app_products'
+2023-12-17T17:12:31.965+08:00  INFO 22004 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-17T17:12:31.992+08:00  INFO 22004 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-12-17T17:12:32.157+08:00  INFO 22004 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-12-17T17:12:32.542+08:00  INFO 22004 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-12-17T17:12:32.546+08:00  INFO 22004 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-17T17:12:32.668+08:00  WARN 22004 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-17T17:12:32.817+08:00  WARN 22004 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-12-17T17:12:32.831+08:00  INFO 22004 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2023-12-17T17:12:32.854+08:00  WARN 22004 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-12-17T17:12:32.881+08:00  INFO 22004 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 50948 (http) with context path ''
+2023-12-17T17:12:32.882+08:00  INFO 22004 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 50948
+2023-12-17T17:12:32.884+08:00  INFO 22004 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2023-12-17T17:12:32.899+08:00  INFO 22004 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2023-12-17T17:12:32.901+08:00  INFO 22004 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T17:12:32.909+08:00  INFO 22004 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2023-12-17T17:12:32.909+08:00  INFO 22004 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2023-12-17T17:12:32.909+08:00  INFO 22004 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2023-12-17T17:12:32.909+08:00  INFO 22004 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2023-12-17T17:12:32.909+08:00  INFO 22004 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2023-12-17T17:12:32.910+08:00  INFO 22004 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2023-12-17T17:12:32.910+08:00  INFO 22004 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2023-12-17T17:12:33.102+08:00  INFO 22004 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2023-12-17T17:12:33.104+08:00  INFO 22004 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2023-12-17T17:12:33.105+08:00  INFO 22004 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-12-17T17:12:33.106+08:00  INFO 22004 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1702804353106 with initial instances count: 3
+2023-12-17T17:12:33.108+08:00  INFO 22004 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PRODUCTS-WS with eureka with status UP
+2023-12-17T17:12:33.108+08:00  INFO 22004 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1702804353108, current=UP, previous=STARTING]
+2023-12-17T17:12:33.108+08:00  INFO 22004 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/localhost:products-ws:0: registering service...
+2023-12-17T17:12:33.115+08:00  INFO 22004 --- [restartedMain] c.j.P.PosAppApiProductsApplication       : Started PosAppApiProductsApplication in 5.512 seconds (process running for 5.991)
+2023-12-17T17:12:33.214+08:00  INFO 22004 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PRODUCTS-WS/localhost:products-ws:0 - registration status: 204
+2023-12-17T17:15:19.836+08:00  INFO 22004 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-17T17:15:19.837+08:00  INFO 22004 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-17T17:15:19.840+08:00  INFO 22004 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-12-17T17:17:32.913+08:00  INFO 22004 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T17:22:32.913+08:00  INFO 22004 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T17:27:32.924+08:00  INFO 22004 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T17:32:32.928+08:00  INFO 22004 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T17:37:32.935+08:00  INFO 22004 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T17:42:32.939+08:00  INFO 22004 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T17:47:32.942+08:00  INFO 22004 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T17:52:32.946+08:00  INFO 22004 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T17:57:32.949+08:00  INFO 22004 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T18:02:33.061+08:00  INFO 22004 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T18:07:33.074+08:00  INFO 22004 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T18:12:33.086+08:00  INFO 22004 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2023-12-17T18:17:27.524+08:00  WARN 22004 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54s926ms).
+2023-12-17T18:25:55.946+08:00  WARN 22004 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m28s425ms).
+2023-12-17T18:25:56.430+08:00  INFO 22004 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

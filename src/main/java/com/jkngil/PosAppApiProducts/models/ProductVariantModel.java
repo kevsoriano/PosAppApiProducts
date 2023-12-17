@@ -6,6 +6,7 @@ public class ProductVariantModel {
 	private long id;
 	private String SKU;
 	private List<ProductAttributeModel> productAttributes;
+	private List<OutletProductVariantModel> inventoryDetails;
 
 	public long getId() {
 		return id;
@@ -29,6 +30,14 @@ public class ProductVariantModel {
 
 	public void setProductAttributes(List<ProductAttributeModel> productAttributes) {
 		this.productAttributes = productAttributes;
+	}
+
+	public List<OutletProductVariantModel> getInventoryDetails() {
+		return inventoryDetails;
+	}
+
+	public void setInventoryDetails(List<OutletProductVariantModel> inventoryDetails) {
+		this.inventoryDetails = inventoryDetails;
 	}
 
 }

@@ -3,6 +3,9 @@ package com.jkngil.PosAppApiProducts.data;
 import java.io.Serializable;
 import java.util.List;
 
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -13,8 +16,9 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 
-@Entity(name="product_variants")
+@Entity(name = "product_variants")
 public class ProductVariantEntity implements Serializable {
 
 	private static final long serialVersionUID = 9025621986547075301L;
@@ -30,5 +34,48 @@ public class ProductVariantEntity implements Serializable {
 	@ManyToOne
 	@JoinColumn(name = "product_id")
 	private ProductEntity productDetails;
+	@OneToMany(mappedBy = "productVariantDetails", cascade = CascadeType.ALL)
+	@LazyCollection(LazyCollectionOption.FALSE)
+	private List<OutletProductVariantEntity> inventoryDetails;
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getSKU() {
+		return SKU;
+	}
+
+	public void setSKU(String sKU) {
+		SKU = sKU;
+	}
+
+	public List<ProductAttributeEntity> getProductAttributes() {
+		return productAttributes;
+	}
+
+	public void setProductAttributes(List<ProductAttributeEntity> productAttributes) {
+		this.productAttributes = productAttributes;
+	}
+
+	public ProductEntity getProductDetails() {
+		return productDetails;
+	}
+
+	public void setProductDetails(ProductEntity productDetails) {
+		this.productDetails = productDetails;
+	}
+
+	public List<OutletProductVariantEntity> getInventoryDetails() {
+		return inventoryDetails;
+	}
+
+	public void setInventoryDetails(List<OutletProductVariantEntity> inventoryDetails) {
+		this.inventoryDetails = inventoryDetails;
+	}
 
 }

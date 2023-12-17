@@ -2,6 +2,7 @@ package com.jkngil.PosAppApiProducts.services;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
@@ -13,6 +14,7 @@ import org.springframework.stereotype.Service;
 
 import com.jkngil.PosAppApiProducts.data.ProductEntity;
 import com.jkngil.PosAppApiProducts.data.ProductRepository;
+import com.jkngil.PosAppApiProducts.shared.OutletProductVariantDto;
 import com.jkngil.PosAppApiProducts.shared.ProductDto;
 import com.jkngil.PosAppApiProducts.shared.ProductVariantDto;
 
@@ -34,6 +36,12 @@ public class ProductServiceImpl implements ProductService {
 		for(int i=0; i<productDetails.getProductVariants().size();i++) {
 			ProductVariantDto productVariant = productDetails.getProductVariants().get(i);
 			productVariant.setProductDetails(productDetails);
+			
+			for(int j=0;j<productVariant.getInventoryDetails().size();j++) {
+				OutletProductVariantDto inventoryDetails = productVariant.getInventoryDetails().get(j);
+				inventoryDetails.setProductVariantDetails(productVariant);
+				productVariant.getInventoryDetails().set(i, inventoryDetails);
+			}
 			productDetails.getProductVariants().set(i,productVariant);
 		}
 		
@@ -58,6 +66,19 @@ public class ProductServiceImpl implements ProductService {
 			ProductDto productDto = modelMapper.map(product, ProductDto.class);
 			returnValue.add(productDto);
 		}
+		return returnValue;
+	}
+
+	@Override
+	public ProductDto getProduct(long id) {
+		ModelMapper modelMapper = new ModelMapper();
+		modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
+		
+		ProductDto returnValue = new ProductDto();
+		Optional<ProductEntity> product = productRepository.findById(id);
+//		productEntity.isPresent(value -> doSomething(value));
+		returnValue = modelMapper.map(product.get(), ProductDto.class);
+		
 		return returnValue;
 	}
 
