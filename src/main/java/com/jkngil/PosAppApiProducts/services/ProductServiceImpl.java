@@ -32,7 +32,6 @@ public class ProductServiceImpl implements ProductService {
 	public ProductDto createProduct(ProductDto productDetails) {
 		ModelMapper modelMapper = new ModelMapper();
 		modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
-		
 		for(int i=0; i<productDetails.getProductVariants().size();i++) {
 			ProductVariantDto productVariant = productDetails.getProductVariants().get(i);
 			productVariant.setProductDetails(productDetails);

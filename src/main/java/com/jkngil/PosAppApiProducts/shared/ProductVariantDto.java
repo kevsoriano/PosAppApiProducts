@@ -7,10 +7,14 @@ public class ProductVariantDto implements Serializable {
 
 	private static final long serialVersionUID = 3335437015991531897L;
 	private long id;
+	private String name;
 	private String SKU;
 	private List<ProductAttributeDto> productAttributes;
 	private List<OutletProductVariantDto> inventoryDetails;
 	private ProductDto productDetails;
+	private double taxRate;
+	private double markup;
+	private double retailPrice;
 
 	public long getId() {
 		return id;
@@ -50,6 +54,38 @@ public class ProductVariantDto implements Serializable {
 
 	public void setInventoryDetails(List<OutletProductVariantDto> inventoryDetails) {
 		this.inventoryDetails = inventoryDetails;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getTaxRate() {
+		return taxRate;
+	}
+
+	public void setTaxRate(double taxRate) {
+		this.taxRate = taxRate;
+	}
+
+	public double getMarkup() {
+		return markup;
+	}
+
+	public void setMarkup(double markup) {
+		this.markup = markup;
+	}
+
+	public double getRetailPrice() {
+		return retailPrice;
+	}
+
+	public void setRetailPrice(double retailPrice) {
+		this.retailPrice = retailPrice;
 	}
 
 }

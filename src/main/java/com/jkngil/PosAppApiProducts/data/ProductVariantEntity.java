@@ -27,6 +27,8 @@ public class ProductVariantEntity implements Serializable {
 	@GeneratedValue
 	private long id;
 	@Column
+	private String name;
+	@Column
 	private String SKU;
 	@ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE }, fetch = FetchType.EAGER)
 	@JoinTable(name = "product_variant_attributes", joinColumns = @JoinColumn(name = "variant_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "attribute_id", referencedColumnName = "id"))
@@ -37,6 +39,13 @@ public class ProductVariantEntity implements Serializable {
 	@OneToMany(mappedBy = "productVariantDetails", cascade = CascadeType.ALL)
 	@LazyCollection(LazyCollectionOption.FALSE)
 	private List<OutletProductVariantEntity> inventoryDetails;
+//	private double supplyPrice; // TODO: determine where to put supply price
+	@Column
+	private double taxRate;
+	@Column
+	private double markup;
+	@Column
+	private double retailPrice;
 
 	public long getId() {
 		return id;
@@ -76,6 +85,38 @@ public class ProductVariantEntity implements Serializable {
 
 	public void setInventoryDetails(List<OutletProductVariantEntity> inventoryDetails) {
 		this.inventoryDetails = inventoryDetails;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getTaxRate() {
+		return taxRate;
+	}
+
+	public void setTaxRate(double taxRate) {
+		this.taxRate = taxRate;
+	}
+
+	public double getMarkup() {
+		return markup;
+	}
+
+	public void setMarkup(double markup) {
+		this.markup = markup;
+	}
+
+	public double getRetailPrice() {
+		return retailPrice;
+	}
+
+	public void setRetailPrice(double retailPrice) {
+		this.retailPrice = retailPrice;
 	}
 
 }
