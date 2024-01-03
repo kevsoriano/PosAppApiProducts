@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -62,13 +63,20 @@ public class ProductController {
 	}
 	
 	@GetMapping(value = "/{id}")
-	public ResponseEntity<ProductResponseModel> getProduct(@PathVariable String id) {
+	public ResponseEntity<ProductResponseModel> getProduct(@PathVariable long id) {
 		ModelMapper modelMapper = new ModelMapper();
 		modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
 		
-		ProductDto productDto = productService.getProduct(Long.parseLong(id));
+		ProductDto productDto = productService.getProduct(id);
 		ProductResponseModel returnValue = modelMapper.map(productDto, ProductResponseModel.class);
 		
 		return ResponseEntity.status(HttpStatus.OK).body(returnValue);
+	}
+	
+	@PutMapping(value = "/{productId}")
+	public ResponseEntity<ProductResponseModel> updateProductQty(@PathVariable long productId, @RequestParam(value="amount", defaultValue="0") int amount) {
+		ProductDto productDto = productService.getProduct(productId);
+		
+		return ResponseEntity.status(HttpStatus.OK).body(null);
 	}
 }
