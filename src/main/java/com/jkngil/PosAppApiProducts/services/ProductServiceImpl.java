@@ -17,6 +17,7 @@ import com.jkngil.PosAppApiProducts.data.ProductRepository;
 import com.jkngil.PosAppApiProducts.shared.OutletProductVariantDto;
 import com.jkngil.PosAppApiProducts.shared.ProductDto;
 import com.jkngil.PosAppApiProducts.shared.ProductVariantDto;
+import com.jkngil.PosAppApiProducts.shared.SaleLineItemDto;
 
 @Service
 public class ProductServiceImpl implements ProductService {
@@ -77,6 +78,21 @@ public class ProductServiceImpl implements ProductService {
 		Optional<ProductEntity> product = productRepository.findById(id);
 //		productEntity.isPresent(value -> doSomething(value));
 		returnValue = modelMapper.map(product.get(), ProductDto.class);
+		
+		return returnValue;
+	}
+
+	@Override
+	public List<ProductDto> updateProductQty(List<SaleLineItemDto> saleDetails) {
+		List<ProductDto> returnValue = new ArrayList<>();
+		
+		for(int i=0;i<saleDetails.size();i++) {
+//			ModelMapper modelMapper = new ModelMapper();
+//			modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
+			
+			ProductEntity product = productRepository.findByName(saleDetails.get(i).getProductName());
+			product.getProductVariants().get(i).getInventoryDetails();
+		}
 		
 		return returnValue;
 	}
